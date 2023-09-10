@@ -60,14 +60,14 @@
 
                 adjust_layer {
 // -----------------------------------------------------------------------------------------------
-//       | RGBTOG| BT0 | BT1 | BT2 | BT3  | BT4 |   | BT4 | BT3  | BT2 | BT1 | BT0 | RGBTOG|                          
-//       | MOD+  | HUE+| SAT+| VAL+|      | BLDR|   | BLDR|      | VAL+| SAT+| HUE+| MOD+  |
-//       | MOD-  | HUE-| SAT-| VAL-| F1   |     |   |     | F2   | VAL-| SAT-| HUE-| MOD-  |
+//       | RGBTOG| BT0 | BT1 | BT2 | BT3  | BT4 |   | BT4 | BT3  | BT2 | BT1 | BT0 |       |                          
+//       |       |     |     |     |      |     |   |     |      |     |     |     |       |
+//       |       |     |     |     | F1   |     |   |     | F2   |     |     |     |       |
 //                           |     | BTCLR|     |   |     | BTCLR|     |
                         bindings = <
-   &rgb_ug RGB_TOG  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3 &bt BT_SEL 4   &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2    &bt BT_SEL 1    &bt BT_SEL 0    &rgb_ug RGB_TOG
-   &rgb_ug RGB_EFF  &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_BRI &none        &bootloader    &bootloader  &none        &rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_EFF
-   &rgb_ug RGB_EFR  &rgb_ug RGB_HUD &rgb_ug RGB_SAD &rgb_ug RGB_BRD &kp F1        &none         &none       &kp F2        &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_EFR
+   &none   &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3 &bt BT_SEL 4   &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2    &bt BT_SEL 1    &bt BT_SEL 0    &rgb_ug RGB_TOG
+   &none   &none           &none           &none           &none        &none          &none        &none        &none           &none           &none           &none 
+   &none   &none           &none           &none           &kp F1       &none          &none        &kp F2       &none           &none           &none           &none 
                                                                  &trans &bt BT_CLR &trans         &trans &bt BT_CLR &trans
                         >;
                 };
