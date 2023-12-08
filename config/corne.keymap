@@ -15,6 +15,7 @@
 #define ADJ 3
 #define GAME 4
 
+#define NONE 0
 
 / {
         keymap {
