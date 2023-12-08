@@ -12,6 +12,7 @@
 #define LWR 1
 #define RSE 2
 #define ADJ 3
+#define GAME 4
 
 / {
         keymap {
@@ -67,8 +68,21 @@
                         bindings = <
    &none   &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3 &bt BT_SEL 4   &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2    &bt BT_SEL 1    &bt BT_SEL 0    &rgb_ug RGB_TOG
    &none   &none           &none           &none           &none        &none          &none        &none        &none           &none           &none           &none 
-   &none   &none           &none           &none           &kp F1       &none          &none        &kp F2       &none           &none           &none           &none 
+   &none   &none           &none           &none           &kp F1       &none          &none        &kp F2       &none           &none           &none           &lt LWR GAME 
                                                                  &trans &bt BT_CLR &trans         &trans &bt BT_CLR &trans
+                        >;
+                };
+                game_layer {
+// -----------------------------------------------------------------------------------------
+// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  Y  |  U   |  I  |  O  |  P  | [    |
+// | CAPS |  A  |  W  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+// | SHFT F16 |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHFT F17|
+//                    | GUI | SPC | LWR |   | ENT | RSE  | ALT |
+                        bindings = <
+   &kp TAB     &kp N1    &kp N2    &kp N3   &kp N4   &kp N5            &kp Y     &kp U     &kp I       &kp O      &kp P      &kp LBKT
+   &kp ESC     &kp Q     &kp W     &kp E    &kp F    &kp G             &kp H     &kp J     &kp K       &kp L      &kp SEMI   &kp SQT
+   &kp LSHFT   &kp A     &kp S     &kp D    &kp V    &kp B             &kp N     &kp M     &kp COMMA   &kp DOT    &kp RALT   &kp RET
+                               &kp RCTRL &kp SPACE &mo LWR             &mo RSE &kp RGUI  &kp DEL
                         >;
                 };
         };
